@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class ScoreCollectionTest {
 
 	@Test
-	public void test() {
+	public void answersArithmeticMeanOfTwoNumbers() {
 		// 준비
 		ScoreCollection collection = new ScoreCollection();
 		collection.add(() -> 5);
