@@ -13,3 +13,32 @@
 
 테스트 코드는 무엇보다도 먼저 기대한 결과를 산출하는지 검증할 수 있어야 함
 
+```java
+@Test
+public void answersArithmeticMeanOfTwoNumbers() {
+    ScoreCollection collection = new ScoreCollection();
+    collection.add(() -> 5);
+    collection.add(() -> 7);
+ 
+    int actualResult = collection.arithmeticMean();
+ 
+    assertThat(actualResult, equalTo(6));
+}
+```
+
+- 테스트 코드는 먼저 기대한 결과를 선출하는지 검증할 수 있어야 함
+- "해당 코드가 정상적으로 동작한다면 어떠한 입력 값이 들어오더라도 정상적으로 출력되는 결과를 알수 있나?"
+
+## Right-[B]ICEP 경계 조건은 맞는가?
+
+> 수많은 결함은 경계 조건에 해당하는 테스트 케이스에서 많이 나오기 때문에 경계 조건을 처리해야 함
+
+- 모호하고 일관성 없는 값
+- 잘못된 양식의 데이터
+- 수치적 오버플로를 일으키는 계산
+- 비거나 빠진 값
+- 이성적인 기댓값을 훨씬 벗어나는 값
+- 중복이 허용 안되는 목록에 중복이 있는 경우
+- 정렬이 안 된 정렬 리스트 혹은 그 반대.
+- 시간 순이 맞지 않는 경우
+
